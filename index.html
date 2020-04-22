@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>videoService</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -14,55 +14,80 @@
     <div>
         <p>Видеосервис</p>
     </div>
-    <div><input type="text">
+    <div class="search">
+        <input type="text" placeholder="Поиск...">
         <button>Найти</button>
     </div>
-    <div>
+    <div class="entrance">
         <button>Войти</button>
     </div>
 </header>
     <section>
-        <div>
-            <button>Фильмы</button>
+        <div class="tab">
+            <button class="activ">Фильмы</button>
             <button>Телеканалы</button>
         </div>
     </section>
-    <section class="newFilms" >
-        <h2>🔥 Новинки</h2>
-        <div class="new">
-            <img  src="photo/image.png" height="370" width="280"/>
-            <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+<section class="newFilms">
+    <h2>🔥 Новинки</h2>
+    <div class="new">
+        <div class="holder">
+            <img src="photo/kinopoisk.ru-Coco-3054379.jpg" height="1176" width="800"/>
+            <div class="block"></div>
         </div>
-        <div class="new">
-            <img src="photo/image.png" height="370" width="280"/>
-            <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+    </div>
+    <div class="new">
+        <div class="holder">
+            <img src="photo/kinopoisk.ru-Fantasy-Island-3432918.jpg" height="1186" width="800"/>
+            <div class="block">
+                Пример блока, при наведении на который появляется другой блок.</div>
         </div>
-        <div class="new">
-            <img src="photo/image.png" height="370" width="280"/>
-            <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+    </div>
+    <div class="new">
+        <div class="holder">
+            <img src="photo/kinopoisk.ru-Once-Upon-a-Time-in-Hollywood-3340320.jpg" height="1186" width="800"/>
+            <div class="block"></div>
         </div>
-        <div class="new ">
-            <img src="photo/image.png" height="370" width="280"/>
-            <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+    </div>
+    <div class="new">
+        <div class="holder">
+            <img src="photo/Dc3Lx7LBy0Q.jpg" height="1200" width="800"/>
+            <div class="block"></div>
         </div>
-    </section>
+        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+    </div>
+</section>
     <section class="genres">
         <h2>Жанры</h2>
         <div class="comedy">
-            <p> 😁 <br> Комедии</p>
+            <p> 😁 </p>
+            <p>Комедии</p>
         </div>
         <div class="dramas">
-            <p>😭 <br> Драмы</p>
+            <p>😭 </p>
+            <p>Драмы</p>
         </div>
         <div class="fantastic">
-            <p>👽 <br> Фантастика</p>
+            <p>👽 </p>
+            <p>Фантастика</p>
         </div>
         <div class="horrorses">
-            <p>👻 <br> Ужасы</p>
+            <p>👻 </p>
+            <p>Ужасы</p>
         </div>
     </section>
-    <footer></footer>
-
+    <footer>
+        <div><img src="photo/Vector.png" height="64" width="33"/></div>
+        <div>
+            <p>426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)<br>
+                +7 (3412) 93-88-61, 43-29-29
+            </p>
+            <p>htc-cs.ru</p>
+        </div>
+    </footer>
 <script src="code.js"></script>
 </body>
 </html>

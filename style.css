@@ -3,40 +3,116 @@ body{
     margin: 0;
     padding: 0 13%;
     background-color: #e5e5e5;
+    font-weight: normal;
     font-size: 20px;
+    line-height: 24px;
 }
 header, section,footer{
     background-color: white;
     padding: 0 9%;
-}
-section{
     max-width: 1440px;
 }
+
 p,h1,h2,h3{
     margin: 0;
-
+    padding: 0;
 }
 header{
     display: flex;
-    justify-content:space-between ;
+    justify-content:left;
     align-items: stretch;
     flex-wrap: wrap;
+    padding-top: 33px;
+    padding-bottom: 44px;
+}
+header>div>p{
+    font-weight: bold;
+    padding: 8px 207px 0 11px;
+}
+.search>input{
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 292px;
+    height: 32px;
+}
+
+.search>button{
+    color: #E5261E;
+    background: white;
+    border: none;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 289px 0 32px;
+
+}
+.entrance>button{
+    border: none;
+    background: #E5261E;
+    border-radius: 4px;
+    color: white;
+    padding: 9px 32px;
+    font-size: 16px;
+}
+.tab{
+    padding-bottom: 34px;
+    text-align: center;
+}
+.tab>button{
+    font-size: 28px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}
+.activ{
+    color: #E5261E;
+    border-bottom: 2px solid #E5261E !important;
+}
+
+.newFilms>h2, .genres>h2 {
+    width: 100%;
+    padding-bottom: 16px;
+    text-align: left;
+    font-weight: bold;
 }
 .newFilms{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: stretch;
     flex-wrap: wrap;
 }
-.newFilms>h2, .genres>h2{
-    width: 100%;
+.holder{
+    position:relative;
+    height: 390px;
+    width: 260px;
+}
+.block{
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+    top:0;
+    background: #333333;
+    opacity: 0.8;
+    border-radius: 8px;
+    font-size: 16px;
+    color: white;
+    padding:16px;
+    display:none;
+
+}
+.holder:hover .block{
+    display:block;
 }
 
-.new>img{
-    border-radius: 5px;
+.holder>img{
+    border-radius: 8px;
+    height: 390px;
+    width: 260px;
 }
 .new>p{
-    width: 280px;
+    width: 260px;
+    padding: 16px 0 32px 0;
 }
 
 .genres{
@@ -51,23 +127,45 @@ header{
     height: 208px;
     width: 280px;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin-bottom: 72px;
 }
 .genres>div>p{
-    padding-top: 80px;
+    padding-top: 60px;
 }
 .comedy{
     background: linear-gradient(136.27deg, #F2C94C 8.44%, #F29A4A 91.36%);
+    opacity: 0.8;
 }
 
 .dramas{
     background: linear-gradient(136.27deg, #F2994A 8.44%, #EB5757 91.36%);
+    opacity: 0.8;
 }
 
 .fantastic{
-    background: linear-gradient(136.27deg, #56CCF2 8.44%, #2F80ED 91.36%);;
+    background: linear-gradient(136.27deg, #56CCF2 8.44%, #2F80ED 91.36%);
+    opacity: 0.8;
 }
 
 .horrorses{
-    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);;
+    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+    opacity: 0.8;
+}
+
+.genres>div:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:  #F2F2F2;
+    display: flex;
+    justify-content: left;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+footer>div:first-child{
+  margin-right: 40px;
 }

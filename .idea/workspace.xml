@@ -17,11 +17,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1aqK9vwsQiBGz9CwWbAK0q7zjYy" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../проекты верстка/indian_brunch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../эксперемент" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,10 +56,26 @@
       <option name="presentableId" value="Default" />
       <updated>1587457535185</updated>
       <workItem from="1587457536559" duration="6130000" />
+      <workItem from="1587483988794" duration="4334000" />
+      <workItem from="1587539383307" duration="3498000" />
+      <workItem from="1587542963770" duration="4054000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
