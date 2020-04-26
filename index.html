@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>videoService</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="modalWrapper" class="modalWrapper">
+<div id="contentWindow" class="contentWindow">
+    <h2>Вход</h2>
+    <input name="login" value="Логин"><br>
+    <input type="password" value="Пароль"><br>
+    <label> <input type="checkbox"> Запомнить </label><br>
+    <button>Войти</button>
+</div>
+</div>
 <header>
     <div>
         <img src="photo/sign.svg">
@@ -19,21 +28,22 @@
         <button>Найти</button>
     </div>
     <div class="entrance">
-        <button>Войти</button>
+        <button id="btnEntrance">Войти</button>
     </div>
 </header>
-    <section>
+<section>
         <div class="tab">
-            <button class="activ">Фильмы</button>
-            <button>Телеканалы</button>
+            <button id="tabFilms">Фильмы</button>
+            <button id="tabСhannels">Телеканалы</button>
         </div>
-    </section>
-<section class="newFilms">
+</section>
+<div id="films">
+<section class="newFilms" id="newFilms">
     <h2>🔥 Новинки</h2>
-    <div class="new">
-        <div class="holder">
+    <div class="new" id="new">
+        <div class="holder" id="holder">
             <img src="photo/kinopoisk.ru-Coco-3054379.jpg" height="1176" width="800"/>
-            <div class="block"></div>
+            <div class="block" id="block"></div>
         </div>
         <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
     </div>
@@ -79,6 +89,30 @@
             <p>Ужасы</p>
         </div>
     </section>
+</div>
+<div id="tvPrograms">
+    <section class="tv">
+        <div>
+            <img src="photo/1.png" height="64" width="50"/>
+        <table class="channels">
+            <caption>Первый канал</caption>
+            <tr>
+                <td>13:00</td>
+                <td>Новости (с субтитрами)</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Новости (с субтитрами)</td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td>Новости (с субтитрами)</td>
+            </tr>
+        </table>
+        </div>
+        <div></div>
+    </section>
+</div>
     <footer>
         <div><img src="photo/Vector.png" height="64" width="33"/></div>
         <div>

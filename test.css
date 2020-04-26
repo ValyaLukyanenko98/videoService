@@ -1,0 +1,244 @@
+body {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  font-size: 20px; }
+
+header, section, footer {
+  background-color: white;
+  padding: 0 7%;
+  margin: 0 12.2%;
+  max-width: 1440px; }
+
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0; }
+
+button:focus, input:focus {
+  outline: none; }
+
+.modalWrapper {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  padding: 0; }
+
+.contentWindow {
+  background-color: white;
+  height: 394px;
+  width: 304px;
+  border-radius: 8px;
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  display: none; }
+
+.contentWindow > button {
+  border: none;
+  background: #E5261E;
+  border-radius: 4px;
+  color: white;
+  padding: 9px 32px;
+  font-size: 16px;
+  margin-top: 120px; }
+
+.contentWindow > input {
+  width: 232px;
+  border: none;
+  border-bottom: 1px solid  #828282;
+  font-size: 16px;
+  color: #828282;
+  margin-bottom: 24px; }
+
+label {
+  font-size: 16px; }
+
+.contentWindow > h2 {
+  font-size: 28px;
+  padding: 36px 0 24px 0; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding-top: 33px;
+  padding-bottom: 44px; }
+
+header > div > p {
+  font-weight: bold;
+  padding: 8px 207px 0 11px; }
+
+.search > input {
+  border: none;
+  border-bottom: 1px solid #333333;
+  width: 292px;
+  height: 32px; }
+
+.search > button {
+  color: #E5261E;
+  background: white;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0 287px 0 32px; }
+
+.entrance > button {
+  border: none;
+  background: #E5261E;
+  border-radius: 4px;
+  color: white;
+  padding: 9px 32px;
+  font-size: 16px; }
+
+.tab {
+  padding-bottom: 34px;
+  text-align: center; }
+
+.tab > button {
+  font-size: 28px;
+  border: none;
+  background-color: white;
+  font-weight: bold; }
+
+.activ {
+  color: #E5261E;
+  border-bottom: 2px solid #E5261E !important; }
+
+#films {
+  display: none; }
+
+.newFilms {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+.newFilms > h2, .genres > h2 {
+  width: 100%;
+  padding-bottom: 16px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 24px; }
+
+.holder {
+  position: relative;
+  height: 390px;
+  width: 260px; }
+
+.block {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: #333333;
+  opacity: 0.8;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  padding: 16px;
+  display: none; }
+
+.holder:hover .block {
+  display: block; }
+
+.holder > img {
+  border-radius: 8px;
+  height: 390px;
+  width: 260px; }
+
+.new > p {
+  width: 260px;
+  padding: 16px 0 32px 0; }
+
+.genres {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  text-align: center; }
+
+.genres > div {
+  height: 208px;
+  width: 280px;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 72px; }
+
+.genres > div > p {
+  padding-top: 60px; }
+
+.comedy {
+  background: linear-gradient(136.27deg, #F2C94C 8.44%, #F29A4A 91.36%);
+  opacity: 0.8; }
+
+.dramas {
+  background: linear-gradient(136.27deg, #F2994A 8.44%, #EB5757 91.36%);
+  opacity: 0.8; }
+
+.fantastic {
+  background: linear-gradient(136.27deg, #56CCF2 8.44%, #2F80ED 91.36%);
+  opacity: 0.8; }
+
+.horrorses {
+  background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+  opacity: 0.8; }
+
+.genres > div:hover {
+  opacity: 1;
+  transition: 0.5s; }
+
+.tvPrograms {
+  display: none; }
+
+.tv > div {
+  background-color: #F2F2F2;
+  height: 162px;
+  margin-bottom: 16px; }
+
+.tv:last-child {
+  padding-bottom: 72px; }
+
+.tv > div > img {
+  float: left;
+  margin: 48px 143px; }
+
+.channels {
+  float: left;
+  margin-top: 21px;
+  font-size: 16px; }
+
+.channels > caption {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 17px;
+  text-align: left; }
+
+td {
+  padding: 0 8px 12px 0; }
+
+footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: left; }
+
+footer > div > p {
+  font-size: 16px; }
+
+footer > div:first-child {
+  margin-right: 40px; }
+
+/*# sourceMappingURL=test.css.map */

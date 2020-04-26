@@ -24,7 +24,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../эксперемент" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../проекты верстка/Катя задание" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -32,6 +32,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -59,6 +60,11 @@
       <workItem from="1587483988794" duration="4334000" />
       <workItem from="1587539383307" duration="3498000" />
       <workItem from="1587542963770" duration="4054000" />
+      <workItem from="1587550956779" duration="1445000" />
+      <workItem from="1587552647875" duration="8290000" />
+      <workItem from="1587647694261" duration="5637000" />
+      <workItem from="1587740496973" duration="3824000" />
+      <workItem from="1587799804631" duration="10384000" />
     </task>
     <servers />
   </component>

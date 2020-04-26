@@ -1,0 +1,271 @@
+$font-family: "Rubik", sans-serif;
+$mainColor: white;
+$fontBold: bold;
+$borderNone: none;
+$mainOpacity: 0.8;
+
+@mixin flex {
+  display: flex;
+  justify-content:space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+@mixin position {
+  left:0;
+  bottom:0;
+  right:0;
+  top:0;
+}
+
+@mixin block {
+  height: 390px;
+  width: 260px;
+}
+
+@mixin indents{
+  margin: 0;
+  padding: 0;
+}
+@mixin redButton {
+  border: $borderNone;
+  background: #E5261E;
+  border-radius: 4px;
+  color: $mainColor;
+  padding: 9px 32px;
+  font-size: 16px;
+}
+
+@function steigung($color1, $color2) {
+  @return linear-gradient(136.27deg, $color1 8.44%, $color2 91.36%);
+}
+//основное
+body{
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  background-color: #e5e5e5;
+  font-size: 20px;
+}
+header, section,footer{
+  background-color: $mainColor;
+  padding: 0 7%;
+  margin: 0 12.2%;
+  max-width: 1440px;
+}
+p,h1,h2,h3{
+  @include indents;
+}
+button:focus, input:focus {
+  outline: none;
+}
+
+//авторизация
+.modalWrapper {
+  position:fixed;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.7);
+  z-index:100;
+  padding: 0;
+}
+.contentWindow{
+  background-color: $mainColor;
+  height: 394px;
+  width: 304px;
+  border-radius: 8px;
+  text-align: center;
+  position:absolute;
+  z-index: 10;
+  display:none;
+}
+.contentWindow>button{
+  @include redButton;
+  margin-top: 120px;
+}
+.contentWindow>input{
+  width: 232px;
+  border: $borderNone;
+  border-bottom: 1px solid  #828282;
+  font-size: 16px;
+  color: #828282;
+  margin-bottom: 24px;
+}
+label{
+  font-size: 16px;
+}
+.contentWindow>h2{
+  font-size: 28px;
+  padding:36px 0 24px 0;
+}
+
+//шапка
+header{
+  @include flex;
+  padding-top: 33px;
+  padding-bottom: 44px;
+}
+header>div>p{
+  font-weight:$fontBold;
+  padding: 8px 207px 0 11px;
+}
+.search>input{
+  border: $borderNone;
+  border-bottom: 1px solid #333333;
+  width: 292px;
+  height: 32px;
+}
+.search>button{
+  color: #E5261E;
+  background: $mainColor;
+  border: $borderNone;
+  font-family: $font-family;
+  font-weight: $fontBold;
+  font-size: 16px;
+  padding: 0 287px 0 32px;
+}
+.entrance>button{
+  @include redButton;
+}
+
+//табы
+.tab{
+  padding-bottom: 34px;
+  text-align: center;
+}
+.tab>button{
+  font-size: 28px;
+  border: $borderNone;
+  background-color:$mainColor;
+  font-weight: $fontBold;
+}
+.activ{
+  color: #E5261E;
+  border-bottom: 2px solid #E5261E !important;
+}
+
+//блок с фильмами.
+#films{
+  display:none;
+}
+.newFilms{
+  @include flex;
+}
+.newFilms>h2, .genres>h2 {
+  width: 100%;
+  padding-bottom: 16px;
+  text-align: left;
+  font-weight: $fontBold;
+  font-size: 24px;
+}
+
+.holder{
+  position:relative;
+  @include block;
+}
+.block{
+  position:absolute;
+  @include position;
+  background: #333333;
+  opacity: $mainOpacity;
+  border-radius: 8px;
+  font-size: 16px;
+  color: $mainColor;
+  padding:16px;
+  display:none;
+}
+.holder:hover .block{
+  display:block;
+}
+.holder>img{
+  border-radius: 8px;
+  @include block;
+}
+.new>p{
+  width: 260px;
+  padding: 16px 0 32px 0;
+}
+
+//жанры
+.genres{
+  @include flex;
+  text-align: center;
+}
+.genres>div{
+  height: 208px;
+  width: 280px;
+  color: $mainColor;
+  border-radius: 8px;
+  margin-bottom: 72px;
+}
+.genres>div>p{
+  padding-top: 60px;
+}
+.comedy{
+  background: steigung(#F2C94C, #F29A4A);
+  opacity: $mainOpacity;
+}
+.dramas{
+  background: steigung(#F2994A, #EB5757);
+  opacity: $mainOpacity;
+}
+.fantastic{
+  background: steigung(#56CCF2, #2F80ED);
+  opacity: $mainOpacity;
+}
+.horrorses{
+  background:steigung(#828282, #333333);
+  opacity: $mainOpacity;
+}
+.genres>div:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
+
+//блок с каналами
+.tvPrograms{
+  display: none;
+}
+.tv>div{
+  background-color:#F2F2F2;
+  height: 162px;
+  margin-bottom: 16px;
+}
+.tv:last-child{
+  padding-bottom: 72px;
+}
+.tv>div>img{
+  float: left;
+  margin: 48px 143px;
+}
+.channels{
+  float: left;
+  margin-top: 21px;
+  font-size: 16px;
+}
+.channels>caption{
+  font-size: 20px;
+  font-weight: $fontBold;
+  margin-bottom: 17px;
+  text-align: left;
+}
+td{
+  padding: 0 8px 12px 0;
+}
+
+//подвал
+footer{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color:  #F2F2F2;
+  @include flex;
+  justify-content: left;
+}
+footer>div>p{
+  font-size: 16px;
+}
+footer>div:first-child{
+  margin-right: 40px;
+}
