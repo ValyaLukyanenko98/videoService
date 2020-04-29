@@ -113,7 +113,7 @@ header > div > p {
   border-bottom: 2px solid #E5261E !important; }
 
 #films {
-  display: none; }
+  display: block; }
 
 .newFilms {
   display: flex;
@@ -196,25 +196,37 @@ header > div > p {
   opacity: 1;
   transition: 0.5s; }
 
-.tvPrograms {
+#scrollbar {
+  height: 700px; }
+
+#tvPrograms {
   display: none; }
 
-.tv > div {
+.oneChannel {
   background-color: #F2F2F2;
   height: 162px;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  border-radius: 8px; }
 
 .tv:last-child {
   padding-bottom: 72px; }
 
-.tv > div > img {
+.oneChannel > img {
   float: left;
-  margin: 48px 143px; }
+  margin: 4% 15%;
+  height: 60px;
+  width: 60px; }
+
+.oneChannel:last-child {
+  margin: 0; }
 
 .channels {
   float: left;
   margin-top: 21px;
   font-size: 16px; }
+
+.channels > tr:nth-child(1) {
+  color: #E5261E; }
 
 .channels > caption {
   font-size: 20px;

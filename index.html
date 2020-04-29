@@ -5,6 +5,7 @@
     <title>videoService</title>
     <link rel="stylesheet" href="test.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 </head>
 <body>
 <div id="modalWrapper" class="modalWrapper">
@@ -33,42 +34,13 @@
 </header>
 <section>
         <div class="tab">
-            <button id="tabFilms">Фильмы</button>
+            <button id="tabFilms" class="activ">Фильмы</button>
             <button id="tabСhannels">Телеканалы</button>
         </div>
 </section>
 <div id="films">
 <section class="newFilms" id="newFilms">
     <h2>🔥 Новинки</h2>
-    <div class="new" id="new">
-        <div class="holder" id="holder">
-            <img src="photo/kinopoisk.ru-Coco-3054379.jpg" height="1176" width="800"/>
-            <div class="block" id="block"></div>
-        </div>
-        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-    </div>
-    <div class="new">
-        <div class="holder">
-            <img src="photo/kinopoisk.ru-Fantasy-Island-3432918.jpg" height="1186" width="800"/>
-            <div class="block">
-                Пример блока, при наведении на который появляется другой блок.</div>
-        </div>
-        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-    </div>
-    <div class="new">
-        <div class="holder">
-            <img src="photo/kinopoisk.ru-Once-Upon-a-Time-in-Hollywood-3340320.jpg" height="1186" width="800"/>
-            <div class="block"></div>
-        </div>
-        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-    </div>
-    <div class="new">
-        <div class="holder">
-            <img src="photo/Dc3Lx7LBy0Q.jpg" height="1200" width="800"/>
-            <div class="block"></div>
-        </div>
-        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
-    </div>
 </section>
     <section class="genres">
         <h2>Жанры</h2>
@@ -91,26 +63,8 @@
     </section>
 </div>
 <div id="tvPrograms">
-    <section class="tv">
-        <div>
-            <img src="photo/1.png" height="64" width="50"/>
-        <table class="channels">
-            <caption>Первый канал</caption>
-            <tr>
-                <td>13:00</td>
-                <td>Новости (с субтитрами)</td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>Новости (с субтитрами)</td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>Новости (с субтитрами)</td>
-            </tr>
-        </table>
-        </div>
-        <div></div>
+    <section class="tv" id="tv">
+    <div class="scroll" id="scrollbar"> </div>
     </section>
 </div>
     <footer>
@@ -122,6 +76,7 @@
             <p>htc-cs.ru</p>
         </div>
     </footer>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="code.js"></script>
 </body>
 </html>
