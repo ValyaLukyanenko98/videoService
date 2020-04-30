@@ -1,3 +1,27 @@
+let btnEntrance = document.getElementById("btnEntrance");
+
+// возвращает куки с указанным name,
+// или undefined, если ничего не найдено
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+
+function deleteCookie(name) {
+    let cookie = getCookie(name);
+    if (cookie !== undefined) {
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    }
+}
+
+let isLogging = false;
+if (getCookie("user") !== undefined) {
+    isLogging = true;
+    websiteEntry(getCookie("user"))
+}
+
 //получаем фильмы из appi
 let requestFilmURL = "https://api.npoint.io/92face52350a7984a77d";
 
@@ -119,14 +143,14 @@ function addChannelsToHTML(channel,array) {
     content.appendChild(divOneChannel);
 }
 
-//окно авторизации
+// окно авторизации
 function showWindow(){
     let modalWrapper = document.getElementById("modalWrapper");
     let contentWindow = document.getElementById("contentWindow");
     modalWrapper.style.display = 'flex';
     contentWindow.style.display = 'block';
 }
-document.getElementById("btnEntrance").onclick = showWindow;
+document.getElementById("btnEntrance").onclick = onLoginButtonClick;
 
 function noWindow(){
     let modalWrapper = document.getElementById("modalWrapper");
@@ -134,7 +158,58 @@ function noWindow(){
     modalWrapper.style.display = 'none';
     contentWindow.style.display = 'none';
 }
-document.getElementById("modalWrapper").onclick = noWindow;
+
+document.getElementById("close").onclick = noWindow;
+
+//авторизация
+let login = document.getElementById("login");
+let password = document.getElementById("password");
+
+function loginInput() {
+    login.value = "";
+}
+function passwordInput() {
+    password.value = "";
+}
+
+login.onclick = loginInput;
+password.onclick = passwordInput;
+
+//вызов функции в зависимости от состояния кнопки
+function onLoginButtonClick() {
+    if (isLogging) {
+        wbsiteExit();
+    } else {
+        showWindow();
+    }
+}
+
+function wbsiteExit() {
+    btnEntrance.classList.replace('getOut','entranceButton');
+    btnEntrance.innerHTML="Вход";
+    let userName = document.getElementById("userName");
+    userName.innerHTML = '';
+    deleteCookie("user");
+    isLogging = false
+}
+
+function websiteEntry(nameValue) {
+    btnEntrance.classList.replace('entranceButton','getOut');
+    btnEntrance.innerHTML="Выход";
+    let userName = document.getElementById("userName");
+    let name  = document.createElement('p');
+    name.innerText = nameValue;
+    userName.appendChild(name);
+    isLogging = true;
+
+    document.cookie = "user=" + name.innerText; + "; expires=15/02/2100 00:00:00";
+    noWindow()
+}
+
+document.getElementById("contentWindowButton").onclick = function () {
+    websiteEntry(document.getElementById("login").value);
+};
+
 
 //переключение табов
 function switchoverTabFilms(){

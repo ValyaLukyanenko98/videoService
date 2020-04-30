@@ -10,26 +10,27 @@
 <body>
 <div id="modalWrapper" class="modalWrapper">
 <div id="contentWindow" class="contentWindow">
+    <button id="close" class="close">⮾</button>
     <h2>Вход</h2>
-    <input name="login" value="Логин"><br>
-    <input type="password" value="Пароль"><br>
+    <input id="login" name="login" value="Логин"><br>
+    <input id="password" type="password" value="Пароль"><br>
     <label> <input type="checkbox"> Запомнить </label><br>
-    <button>Войти</button>
+    <button class="contentWindowButton" id="contentWindowButton">Войти</button>
 </div>
 </div>
 <header>
     <div>
         <img src="photo/sign.svg">
-    </div>
-    <div>
-        <p>Видеосервис</p>
+        <h1>Видеосервис</h1>
     </div>
     <div class="search">
         <input type="text" placeholder="Поиск...">
-        <button>Найти</button>
+        <button id="search">Найти</button>
+    </div>
+    <div id="userName">
     </div>
     <div class="entrance">
-        <button id="btnEntrance">Войти</button>
+        <button id="btnEntrance" class="entranceButton">Войти</button>
     </div>
 </header>
 <section>

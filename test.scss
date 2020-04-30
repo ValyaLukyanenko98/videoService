@@ -34,6 +34,15 @@ $mainOpacity: 0.8;
   padding: 9px 32px;
   font-size: 16px;
 }
+@mixin whiteButton{
+  color: #E5261E;
+  background: $mainColor;
+  border: $borderNone;
+  font-family: $font-family;
+  font-weight: $fontBold;
+  font-size: 16px;
+}
+
 
 @function steigung($color1, $color2) {
   @return linear-gradient(136.27deg, $color1 8.44%, $color2 91.36%);
@@ -81,7 +90,7 @@ button:focus, input:focus {
   z-index: 10;
   display:none;
 }
-.contentWindow>button{
+.contentWindowButton{
   @include redButton;
   margin-top: 120px;
 }
@@ -100,16 +109,29 @@ label{
   font-size: 28px;
   padding:36px 0 24px 0;
 }
+.close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: $borderNone;
+  background-color: $mainColor;
+  font-size: 20px;
+}
 
 //шапка
 header{
   @include flex;
+  justify-content: space-between;
   padding-top: 33px;
   padding-bottom: 44px;
 }
-header>div>p{
+
+header>div>h1{
   font-weight:$fontBold;
-  padding: 8px 207px 0 11px;
+  margin: 0;
+  padding: 8px 20px 0 11px;
+  font-size: 20px;
+  float: right;
 }
 .search>input{
   border: $borderNone;
@@ -118,16 +140,16 @@ header>div>p{
   height: 32px;
 }
 .search>button{
-  color: #E5261E;
-  background: $mainColor;
-  border: $borderNone;
-  font-family: $font-family;
-  font-weight: $fontBold;
-  font-size: 16px;
-  padding: 0 287px 0 32px;
+  @include whiteButton;
+  padding-left: 32px;
+  padding-top: 8px;
+  float: right;
 }
-.entrance>button{
+.entranceButton{
   @include redButton;
+}
+.getOut{
+  @include whiteButton;
 }
 
 //табы
@@ -282,4 +304,14 @@ footer>div>p{
 }
 footer>div:first-child{
   margin-right: 40px;
+}
+
+@media (max-width: 1150px){
+  .entranceButton{
+    margin-top: 30px;
+    width: 300px;
+  }
+  header {
+    justify-content: center;
+  }
 }

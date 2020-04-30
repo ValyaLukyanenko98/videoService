@@ -39,7 +39,7 @@ button:focus, input:focus {
   z-index: 10;
   display: none; }
 
-.contentWindow > button {
+.contentWindowButton {
   border: none;
   background: #E5261E;
   border-radius: 4px;
@@ -63,17 +63,29 @@ label {
   font-size: 28px;
   padding: 36px 0 24px 0; }
 
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background-color: white;
+  font-size: 20px; }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 33px;
   padding-bottom: 44px; }
 
-header > div > p {
+header > div > h1 {
   font-weight: bold;
-  padding: 8px 207px 0 11px; }
+  margin: 0;
+  padding: 8px 20px 0 11px;
+  font-size: 20px;
+  float: right; }
 
 .search > input {
   border: none;
@@ -88,14 +100,24 @@ header > div > p {
   font-family: "Rubik", sans-serif;
   font-weight: bold;
   font-size: 16px;
-  padding: 0 287px 0 32px; }
+  padding-left: 32px;
+  padding-top: 8px;
+  float: right; }
 
-.entrance > button {
+.entranceButton {
   border: none;
   background: #E5261E;
   border-radius: 4px;
   color: white;
   padding: 9px 32px;
+  font-size: 16px; }
+
+.getOut {
+  color: #E5261E;
+  background: white;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
   font-size: 16px; }
 
 .tab {
@@ -252,5 +274,13 @@ footer > div > p {
 
 footer > div:first-child {
   margin-right: 40px; }
+
+@media (max-width: 1150px) {
+  .entranceButton {
+    margin-top: 30px;
+    width: 300px; }
+
+  header {
+    justify-content: center; } }
 
 /*# sourceMappingURL=test.css.map */
