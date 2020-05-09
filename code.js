@@ -22,6 +22,8 @@ if (getCookie("user") !== undefined) {
     websiteEntry(getCookie("user"))
 }
 
+
+
 //получаем фильмы из appi
 let requestFilmURL = "https://api.npoint.io/92face52350a7984a77d";
 
@@ -197,19 +199,35 @@ function websiteEntry(nameValue) {
     btnEntrance.classList.replace('entranceButton','getOut');
     btnEntrance.innerHTML="Выход";
     let userName = document.getElementById("userName");
-    let name  = document.createElement('p');
-    name.innerText = nameValue;
+    let name  = document.createElement('input');
+    name.value = nameValue;
+    name.id = "inputName";
+    name.className = "changeNamePassive";
     userName.appendChild(name);
     isLogging = true;
-
-    document.cookie = "user=" + name.innerText; + "; expires=15/02/2100 00:00:00";
+    name.onclick = changeInputState;
+    document.cookie = "user=" + name.value; + "; expires=15/02/2100 00:00:00";
     noWindow()
+
 }
 
 document.getElementById("contentWindowButton").onclick = function () {
     websiteEntry(document.getElementById("login").value);
 };
 
+//поле ввода при клике на имя
+
+function changeInputState() {
+    let inputName = document.getElementById("inputName");
+    inputName.className = "changeNameActive";
+    inputName.onblur = OneBlur;
+}
+
+function OneBlur() {
+    let inputName = document.getElementById("inputName");
+    inputName.className = "changeNamePassive";
+    document.cookie = "user=" + inputName.value; + "; expires=15/02/2100 00:00:00";
+}
 
 //переключение табов
 function switchoverTabFilms(){
